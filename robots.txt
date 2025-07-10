@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://doctor-tsagova-madina.ru/sitemap.xml
