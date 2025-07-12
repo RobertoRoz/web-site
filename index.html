@@ -27,20 +27,55 @@
 </head>
 
 <body>
-
   <header>
     <div class="container header-container">
       <div class="header-content">
         <h1>Цагова Мадина Хамидбиевна</h1>
         <p>Кандидат медицинских наук, врач-дерматолог высшей категории</p>
         <div class="contact-buttons">
-          <a href="https://app.medesk.net/patient/?e=5d15ad1981d03c494e837d52&a=anonymous&page=doctor-show&profileId=5d24683dacc1162d51b3423b" class="btn">Записаться на приём</a>
-          <a href="https://instagram.com/madina_dermatolog" class="btn instagram">Instagram</a>
-          <a href="https://t.me/madina_dermatolog" class="btn telegram">Telegram</a>
+          <a href="https://app.medesk.net/patient/?e=5d15ad1981d03c494e837d52&a=anonymous&page=doctor-show&profileId=5d24683dacc1162d51b3423b" class="btn">
+            Записаться на приём
+          </a>
+
+          <div class="btn-copy-wrapper">
+            <a
+              href="https://www.instagram.com/doctor_tsagova_madina?igsh=MTNzc29pdmN3aXc5bA=="
+              class="btn instagram"
+            >
+              Instagram
+            </a>
+            <button
+              class="copy-btn"
+              data-link="https://www.instagram.com/doctor_tsagova_madina?igsh=MTNzc29pdmN3aXc5bA=="
+              aria-label="Скопировать ссылку на Instagram"
+            >
+              📋
+            </button>
+          </div>
+
+          <div class="btn-copy-wrapper">
+            <a
+              href="https://t.me/DermatologTsagovaMadina"
+              class="btn telegram"
+            >
+              Telegram
+            </a>
+            <button
+              class="copy-btn"
+              data-link="https://t.me/DermatologTsagovaMadina"
+              aria-label="Скопировать ссылку на Telegram"
+            >
+              📋
+            </button>
+          </div>
         </div>
       </div>
       <div class="photo-block">
-        <img src="images/person/madina_tsagova_picture.jpg" alt="Фото Цаговой Мадины" class="profile-photo" />
+        <img
+          src="images/person/madina_tsagova_picture.jpg"
+          alt="Фото Цаговой Мадины"
+          class="profile-photo"
+        />
       </div>
     </div>
   </header>
@@ -109,5 +144,17 @@
     <p>&copy; 2025 Цагова Мадина Хамидбиевна</p>
   </footer>
 
+  <script>
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const url = btn.dataset.link;
+        navigator.clipboard.writeText(url).then(() => {
+          const original = btn.textContent;
+          btn.textContent = '✓';
+          setTimeout(() => btn.textContent = original, 1500);
+        });
+      });
+    });
+  </script>
 </body>
 </html>

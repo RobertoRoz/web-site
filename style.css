@@ -1,136 +1,86 @@
-/* Основной стиль */
+/* === Газетный (newspaper) стиль === */
+
+/* 1) Общее: шрифт с засечками + минимализм */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0fafa;
-  color: #333333;
+  background: #fafafa;
+  color: #222;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
 }
 
-header {
-  background: #ffffff;
-  padding: 40px 20px;
+/* 2) Асимметрия и колонки для основного контейнера */
+.container {
+  column-count: 2;       /* две колонки */
+  column-gap: 2rem;      /* промежуток между ними */
+  padding: 2rem;
 }
 
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.header-content {
-  max-width: 600px;
-}
-
-.header-content h1 {
-  margin: 0;
-  color: #006d77;
-  font-size: 2.5em;
-}
-
-.header-content p {
-  margin-top: 10px;
-  color: #333333;
-  font-size: 1.2em;
-}
-
-.profile-photo {
-  max-width: 300px;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-.photo-block {
-  display: flex;
-  justify-content: center;
+  /* асимметричный Grid: контент шире фото */
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
   align-items: center;
 }
 
-.contact-buttons {
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+/* 3) Акцидентная типографика для заголовков */
+h1, h2 {
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
 }
-
-.container {
-  max-width: 1000px;
-  margin: 40px auto;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+h1 {
+  font-size: 2.8rem;
 }
-
-section {
-  margin-bottom: 40px;
-}
-
 h2 {
-  color: #006d77;
-  border-bottom: 2px solid #006d77;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.3rem;
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
+/* 4) Список не рвётся между колонками */
+ul, p {
+  break-inside: avoid;
 }
 
+/* === Стили для кнопок-копилок === */
+.btn-copy-wrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.copy-btn {
+  margin-left: 0.5rem;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border: 1px solid #222;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.copy-btn:hover {
+  background: #222;
+  color: #fafafa;
+}
+
+/* Сохраним ваши обычные кнопки */
 .btn {
   display: inline-block;
-  background: #006d77;
-  color: #ffffff;
-  padding: 12px 20px;
+  padding: 0.6rem 1rem;
   text-decoration: none;
-  border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: opacity 0.2s;
 }
-
 .btn:hover {
-  background: #004c51;
+  opacity: 0.8;
 }
-
-.btn.instagram {
+.btn.instagram { /* можно оставить прежние цвета или сделать всё чёрно-белое */
   background: #e4405f;
+  color: #fff;
 }
-
-.btn.instagram:hover {
-  background: #c5364d;
-}
-
 .btn.telegram {
   background: #2ca5e0;
-}
-
-.btn.telegram:hover {
-  background: #1d82b5;
-}
-
-footer {
-  background: #006d77;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}
-
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .profile-photo {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 250px;
-  }
-  .contact-buttons {
-    justify-content: center;
-  }
+  color: #fff;
 }
