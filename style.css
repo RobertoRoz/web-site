@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background: #fafafa;
-  color: #222;
+  background: #f5e2d3; /* теплый пастельный фон */
+  color: #012b44;      /* роскошный темно-синий текст */
   line-height: 1.6;
 }
 
@@ -27,12 +27,12 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 2.8rem;
-  color: #006d77;
+  color: #012b44; /* тёмно-синий */
 }
 .header-content p {
   margin-top: 10px;
   font-size: 1.2rem;
-  color: #333;
+  color: #012b44; /* тёмно-синий */
 }
 
 /* Фото – уменьшено на 30% */
@@ -65,7 +65,7 @@ header {
 .btn:hover {
   opacity: 0.8;
 }
-/* Приём – тот же стиль, что и соц-сети */
+/* Приём */
 .btn.appointment {
   background: #006d77;
 }
@@ -127,9 +127,10 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.6rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #012b44; /* подчёркивание в тёмно-синем */
   padding-bottom: 0.3rem;
   margin-bottom: 20px;
+  color: #012b44;
 }
 
 /* Списки и абзацы */
