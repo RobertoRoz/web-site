@@ -9,25 +9,18 @@
 
   <!-- Основные SEO -->
   <meta name="description"
-        content="Цагова Мадина Хамидбиевна — кандидат медицинских наук, врач-дерматолог высшей категории в Нальчике (Кабардино-Балкарская Республика). Приём взрослых и детей. Лечение акне, экземы, псориаза и других кожных заболеваний.">
+      content="Дерматолог в Нальчике (КБР) — Цагова Мадина Хамидбиевна, кандидат медицинских наук. Приём взрослых и детей, лечение акне, экземы, псориаза и других кожных заболеваний.">
   <meta name="keywords"
-        content="Цагова Мадина, Цагова Мадина Хамидбиевна, Мадина Хамидбиевна Цагова,
-                 доктор Цагова, врач дерматолог Нальчик, дерматолог КБР,
-                 дерматолог Цагова, кандидат медицинских наук Цагова,
-                 приём дерматолога, лечение акне, лечение экземы,
-                 лечение псориаза, кожные заболевания, кожный врач Нальчик,
-                 дерматовенеролог, дерматолог высшей категории">
+        content="Цагова Мадина, Цагова Мадина Хамидбиевна, доктор Цагова, врач дерматолог Нальчик, дерматолог КБР, дерматолог Цагова, кандидат медицинских наук, приём дерматолога, лечение акне, лечение экземы, лечение псориаза, кожные заболевания, дерматовенеролог, врач высшей категории">
   <meta name="author" content="Цагова М. Х.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://doctor-tsagova-madina.ru/">
 
-  <!-- Favicon и иконки -->
-  <link rel="shortcut icon" href="/images/icon/logo.ico" type="image/x-icon">
-  <link rel="icon" href="/images/icon/logo.ico" type="image/x-icon">
-  <link rel="icon" href="/images/icon/logo.ico" sizes="32x32" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/images/icon/apple-touch-icon.png" sizes="180x180">
   <meta name="msapplication-TileColor" content="#f5e2d3">
-  <meta name="msapplication-TileImage" content="/images/icon/logo.ico">
+  <meta name="msapplication-TileImage" content="/favicon.ico">
   <meta name="theme-color" content="#f5e2d3">
 
   <!-- Open Graph -->
@@ -80,8 +73,7 @@
              class="btn appointment">Записаться на приём</a>
 
           <div class="btn-copy-wrapper">
-            <a href="https://www.instagram.com/doctor_tsagova_madina"
-               class="btn instagram">Instagram</a>
+            <a href="https://www.instagram.com/doctor_tsagova_madina" class="btn instagram">Instagram</a>
             <button class="copy-btn"
                     data-link="https://www.instagram.com/doctor_tsagova_madina"
                     aria-label="Скопировать ссылку на Instagram">
@@ -122,8 +114,8 @@
         <ul>
           <li>1992–1994 гг — Нальчикское медицинское училище (с отличием)</li>
           <li>1994–2000 гг — Медицинский факультет КБГУ «Лечебное дело»</li>
-          <li>2000–2001 гг — Интернатура по дерматовенерологии при Кожно-венерологическом диспансере МЗ КБР (с отличием)</li>
-          <li>2001–2003 гг — Ординатура по дерматовенерологии при КБГУ (с отличием)</li>
+          <li>2000–2001 гг — Интернатура по дерматовенерологии при Кожно-венерологическом диспансере МЗ КБР</li>
+          <li>2001–2003 гг — Ординатура по дерматовенерологии при КБГУ</li>
           <li>2003–2007 гг — Аспирантура, выполнение кандидатской диссертации</li>
           <li>2008 г — Защита кандидатской диссертации в Военно-медицинской академии</li>
           <li>Опубликовано более 12 научных работ</li>
@@ -179,12 +171,12 @@
   <script>
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const url = btn.dataset.link;
-        navigator.clipboard.writeText(url).then(() => {
-          const original = btn.innerHTML;
-          btn.innerHTML = '✓';
-          setTimeout(() => btn.innerHTML = original, 1500);
-        });
+        const old = btn.innerHTML;
+        navigator.clipboard.writeText(btn.dataset.link)
+          .then(() => {
+            btn.innerHTML = '✓';
+            setTimeout(() => btn.innerHTML = old, 1500);
+          });
       });
     });
   </script>
